@@ -174,9 +174,58 @@ section h2::after {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
-.team-placeholder {
-    padding: 50px;
-    background: linear-gradient(to bottom right, #FFFFFF, #F8FAFC);
+/* Team Section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.team-member {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius-lg);
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 59, 92, 0.05);
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary-blue);
+}
+
+.member-info h3 {
+    color: var(--text-headers);
+    font-size: 1.25rem;
+    margin: 0 0 8px;
+    font-weight: 700;
+}
+
+.member-role {
+    color: var(--accent-green);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin: 0 0 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.member-email {
+    display: inline-block;
+    color: rgba(100, 116, 139, 0.8);
+    /* Soft slate */
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.member-email:hover {
+    color: var(--primary-blue);
+    text-decoration: underline;
 }
 
 /* Buttons */
