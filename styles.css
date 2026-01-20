@@ -1,0 +1,229 @@
+:root {
+    /* Brand Colors */
+    --primary-blue: #3B9FD0;
+    /* Logo Sky Blue */
+    --primary-dark: #003B5C;
+    /* Logo Dark Blue */
+    --accent-green: #99CC66;
+    /* Logo Lime Green */
+    --accent-hover: #8ABF55;
+
+    /* UI Functions */
+    --bg-body: #F5F7FA;
+    /* Very light cool grey */
+    --bg-card: #FFFFFF;
+    --text-main: #2D3748;
+    /* Soft black for body text */
+    --text-headers: #003B5C;
+    /* Brand Dark Blue for headers */
+    --text-light: #FFFFFF;
+
+    /* Spacing & Layout */
+    --border-radius-lg: 20px;
+    --border-radius-md: 12px;
+    --shadow-soft: 0 10px 40px -10px rgba(0, 59, 92, 0.08);
+    --shadow-hover: 0 20px 60px -15px rgba(0, 59, 92, 0.15);
+
+    --container-width: 1100px;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-blue) 100%);
+    text-align: center;
+    padding: 120px 20px 140px;
+    /* Extra padding bottom for overlap effect if desired, or just space */
+    color: var(--text-light);
+    border-radius: 0 0 40px 40px;
+    margin-bottom: 60px;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Optional: Subtle pattern overlay or glow */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(153, 204, 102, 0.2) 0%, transparent 70%);
+    /* Green glow */
+    pointer-events: none;
+}
+
+.hero-logo {
+    max-width: 280px;
+    height: auto;
+    margin-bottom: -40px;
+}
+
+.hero-section h1 {
+    margin-top: 0;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    position: relative;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hero-subtitle {
+    font-size: 1.35rem;
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 750px;
+    margin: 0 auto;
+    font-weight: 400;
+    position: relative;
+}
+
+/* Philosophy Section */
+.philosophy-section {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 0 20px;
+}
+
+.philosophy-section blockquote {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--primary-dark);
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+    position: relative;
+    font-family: 'Inter', serif;
+    /* Use sans-serif but keep it elegant */
+}
+
+/* Sections */
+section {
+    margin-bottom: 80px;
+}
+
+section h2 {
+    font-size: 2.25rem;
+    color: var(--text-headers);
+    margin-bottom: 32px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 5px;
+    background: var(--accent-green);
+    margin: 12px auto 0;
+    border-radius: 10px;
+}
+
+/* Premium Card / Placeholder Styling */
+.placeholder-box,
+.image-placeholder {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(0, 59, 92, 0.05);
+    /* Very subtle border */
+    border-radius: var(--border-radius-lg);
+    padding: 60px;
+    text-align: center;
+    color: #64748B;
+    /* Slate grey for placeholder text */
+    font-style: normal;
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: var(--shadow-soft);
+}
+
+.placeholder-box:hover,
+.image-placeholder:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary-blue);
+}
+
+.image-placeholder img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.team-placeholder {
+    padding: 50px;
+    background: linear-gradient(to bottom right, #FFFFFF, #F8FAFC);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-dark);
+    /* Changed to Dark Blue for clearer contrast */
+    color: #FFFFFF;
+    padding: 16px 36px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    /* Bolder text */
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 59, 92, 0.25);
+    margin-top: 20px;
+    border: 2px solid transparent;
+    /* clearer definition */
+}
+
+.btn:hover {
+    background-color: var(--primary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 159, 208, 0.3);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-dark);
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 60px 0 40px;
+    margin-top: 100px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.25rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+}
