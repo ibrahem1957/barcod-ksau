@@ -198,6 +198,16 @@ section h2::after {
     border-color: var(--primary-blue);
 }
 
+.member-avatar {
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary-dark);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    background-image: linear-gradient(135deg, var(--primary-dark) 0%, #002840 100%);
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
 .member-info h3 {
     color: var(--text-headers);
     font-size: 1.25rem;
